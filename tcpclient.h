@@ -3,10 +3,6 @@
 #ifndef TCP_TCPCLIENT_H
 #define TCP_TCPCLIENT_H
 
-
-#ifndef TCPCLIENT_H
-#define TCPCLIENT_H
-
 #include <QObject>
 #include <QTcpSocket>
 
@@ -15,7 +11,7 @@ class TcpClient : public QObject
 Q_OBJECT
 
 public:
-    TcpClient(QObject *p = 0);
+    TcpClient(QObject *p = nullptr);
     ~TcpClient();
 
 public slots:
@@ -26,7 +22,5 @@ public slots:
 private:
     QTcpSocket *tSocket;
 };
-
-#endif // TCPCLIENT_H
 
 #endif //TCP_TCPCLIENT_H

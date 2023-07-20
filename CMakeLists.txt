@@ -8,6 +8,7 @@ set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.12.10/5.12.10/msvc2015_64/lib/cmake")
 
+
 find_package(Qt5 COMPONENTS
         Core
         Gui
@@ -22,6 +23,10 @@ target_link_libraries(tcp
         Qt5::Widgets
         Qt5::Network
         )
+
+
+
+
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
