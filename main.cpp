@@ -17,52 +17,6 @@
 //
 //    std::cout << "--- TCP Server ---" << std::endl;
 //    TcpServer ts;
-//
-//
-//// structure for data
-//    struct Record{
-//        string name;
-//        string family;
-//        int age;
-//        bool married;
-//    };
-//
-//
-//        Record record;
-//        //  cin >> record.name >> record.family >> record.age >> record.married;
-//        //  ofstream  file("record.json");
-//
-//
-////    // input structure data
-////    nlohmann::json dict;
-////    dict["name"] = record.name;
-////    dict["family"] = record.family;
-////    dict["age"] = record.age;
-////    dict["married"] = record.married;
-////    file << dict;
-//
-//
-////another way
-//
-//
-////    nlohmann::json dict = {
-////            {"name", record.name},
-////            {"family", record.family},
-////            {"age", record.age},
-////            {"married", record.married}
-////    };
-////    file << dict;
-//
-////output structure data from file
-//        ifstream file("jsons/record.json");
-//        nlohmann::json dict;
-//        file >> dict;
-//        record.name = dict["name"];
-//        record.family = dict["family"];
-//        record.age = dict["age"];
-//        record.married = dict["married"];
-//        cout << record.name << " " << record.family << " " << record.age << " " << record.married;
-//    return QCoreApplication::exec();
 //}
 
 

@@ -1,9 +1,0 @@
-{
-  "departament": "it",
-  "employees": [
-    {"firstName": "John", "lastName": "Doe"},
-    {"fisrtName": "Michael", "lastName": "Smith"},
-    {"firstName": "Anna", "lastName": "Jones"}
-  ],
-  "number" : 3
-}
