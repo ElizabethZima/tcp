@@ -16,7 +16,7 @@ find_package(Qt5 COMPONENTS
         Network
         REQUIRED)
 
-add_executable(tcp main.cpp tcpclient.cpp tcpclient.h tcpserver.cpp tcpserver.h)
+add_executable(tcp main.cpp tcpclient.cpp tcpclient.h tcpserver.cpp tcpserver.h TCPSocket.h)
 target_link_libraries(tcp
         Qt5::Core
         Qt5::Gui

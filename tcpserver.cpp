@@ -16,8 +16,7 @@ TcpServer::TcpServer(QTcpServer *p) :
         std::cout << "--- Linsting to Port ---" << std::endl;
     else
         std::cout << "*** FAIL LISTING ***" << std::endl;
-    /* Обработка нового запроса на подключение */
-    connect(tServer, SIGNAL(newConnection()),this, SLOT(accept_connection()));
+
 }
 
 TcpServer::~TcpServer()
@@ -30,10 +29,7 @@ void TcpServer::accept_connection()
 {
     std::cout << "--- Accept Connection ---" << std::endl;
     /* Сервер подключает свой сокет к клиентскому сокету */
-                                                   tSocket = tServer->nextPendingConnection();
-    /* Socket читает и отвечает, как только получает информацию */
-    connect(tSocket, SIGNAL(readyRead()),
-            this, SLOT(read_and_reply()));
+    tSocket = tServer->nextPendingConnection();
 }
 
 void TcpServer::read_and_reply()
@@ -46,4 +42,8 @@ void TcpServer::read_and_reply()
     /* Ответить */
     tSocket->write("Nice day");
     tSocket->close();
+
+    delete this;
+
+
 }

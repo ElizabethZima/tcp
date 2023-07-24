@@ -1,5 +1,3 @@
-
-
 #ifndef TCP_TCPCLIENT_H
 #define TCP_TCPCLIENT_H
 
