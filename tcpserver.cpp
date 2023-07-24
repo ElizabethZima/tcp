@@ -13,7 +13,7 @@ TcpServer::TcpServer(QTcpServer *p) :
     tSocket = new QTcpSocket;
     /* Порт прослушивания */
     if(tServer->listen(QHostAddress::Any, PORT))
-        std::cout << "--- Linsting to Port ---" << std::endl;
+        std::cout << "--- Listening to Port ---" << std::endl;
     else
         std::cout << "*** FAIL LISTING ***" << std::endl;
 
@@ -43,7 +43,7 @@ void TcpServer::read_and_reply()
     tSocket->write("Nice day");
     tSocket->close();
 
-    delete this;
-
+    std::cout << "--- Connection Ended ---" << std::endl;
+  //  delete this;
 
 }
